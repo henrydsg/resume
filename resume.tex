@@ -1,0 +1,153 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \centerline{\textbf{{\LARGE Yihung Yu}}}\vspace{+5pt} \\
+  \centerline{~~~~~~~Mobile~~~~~~~$||$~~~~~~~~~~~~~Email~~~~~~~~~~~~~$||$~~~~~~~~~~~GitHub~~~~~~~~~~} \\
+  \vspace{+5pt}\centerline{+886 921605518~$||$~\href{henry840227@gmail.com}{henry840227@gmail.com}~$||$~\href{https://github.com/henrydsg}{github.com/henrydsg} } \\
+  \textbf{Interest:~Autonomous Vehicle, Large-scale Distributed system} \\
+  \textbf{Objective:~R\&D position in the field of localization, planning, computer vision} \\
+  \textbf{Sponsorship or fully remote work required}
+\end{tabular*}
+
+\vspace{-2pt}
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~~C++, Python, Matlab}
+  \resumeSubItem{Tools \& Libs}{~Docker, Git, CMake, GDB, Eigen, Ceres-solver}
+	\resumeSubItem{Platforms}{~~~~~~Linux, Android}
+  \resumeSubItem{Frameworks}{~~~ROS}
+\resumeSubHeadingListEnd
+
+\vspace{-5pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{\href{https://www.gallopwave.com/}{Gallopwave Co.}}{Taipei, Taiwan}
+      {Senior R\&D Engineer}{Nov 2020 - Feb 2022}
+    \resumeItemListStart
+        \resumeItem{Inverse-depth Parameterization of Image Feature for Visual Inertial Odometry}
+          {Designed and Implemented inverse-depth parametrization of image features and a easy-to-switch structure to rapidly test the performance of different types of parametrization. }
+        \resumeItem{SLAM Data Read/Write System}
+          {Re-defined and Re-implemented a sensor data read/write library in C++ which is extremely fast for data seeking and traversing.}
+        \resumeItem{Playback Visualization Tool}
+          {Designed and implemented a 3D, viewpoint-adjustable, fast, high-quality visualization tool for debugging in Unity framework.}
+        \resumeItem{Protection Level Estimation for Global Localization System on Commercial-level Sedan}
+          {Designed and implemented a light-weight protection level estimation algorithm performing high integrity and fair availability.}
+        \resumeItem{Cross-platform Porting}
+          {Modified existing CMake pipeline to make the cross-compiling process of the VIO system a one-click procedure.}
+        \resumeItem{CI/CD Pipeline}
+          {Co-implement the CI/CD pipeline of the VIO system which can effectively detect any significant regression of the performance.}
+      \resumeItemListEnd
+    \resumeSubheading{\href{http://www.kingwaytek.com/}{Kingwaytek Technology}}{Taipei, Taiwan}
+      {R\&D Engineer}{Nov 2019 - Oct 2020}
+		\resumeItemListStart
+        \resumeItem{LiDAR Localization}
+          {Redesigned the pipeline of Autoware's NDT localizer to realize fully automated localization in several controlled environment with point cloud map.}
+        \resumeItem{MPC Waypoint Follower}
+          {Refactored and tuned Autoware's MPC waypoint follower to run smoothly on a e-bus in several contorlled area.}
+        \resumeItem{Steering Angle Calibration}
+          {Designed and executed a low-cost (less than 200 USD, no additional cost for repeating the experiment) experiment to acquire steering wheel - steering angle curve.}
+		\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\vspace{-5pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of California, Berkeley}{California, Berkeley}
+{Master of Engineering - Mechanical Engineering}{Aug 2018 - May 2019}
+{\scriptsize \textit{ \footnotesize{\newline{}\textbf{Selected Courses:} Intro to AI, Advanced Control System (Model Predictive Control), Linear Control System, Nonlinear Control System}}}
+\resumeSubheading
+{National Taiwan University}{Taipei, Taiwan}
+{Bachlor of Science - Mechanical Engineering}{Sep 2013 - June 2017}
+{\scriptsize \textit{ \footnotesize{\newline{}\textbf{Selected Courses:} Data Structure and Algorithms, Intro to Robotics, Advanced Dynamics}}}
+\resumeSubHeadingListEnd
+
+\section{Volunteer Experience}
+  \resumeSubHeadingListStart
+	\resumeSubheading
+    {NTU Mechanical Engineering Student Association}{Taipei, Taiwan}
+    {Led and organized student session events and arranged activities of the department.}{June 2015 - June 2016}
+\vspace{5pt}
+\resumeSubHeadingListEnd
+
+\end{document}
